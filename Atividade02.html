@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício JavaScript Faculdade</title>
+    <style>
+        body {
+            font: normal 18px Arial;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        main {
+            justify-content: center;
+            display: flex;
+            padding: 5px;
+            margin-top: 40px;
+        }
+
+        div#form {
+            background-color: rgb(243, 222, 105);
+            flex-direction: column;
+            width: 300px;
+            height: 200px;
+            padding: 15px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px grey;
+        }
+
+        div#buttons {
+            margin-top: 20px;
+        }
+
+        div#buttons button {
+            border-radius: 5px;
+            height: 30px;
+        }
+
+        input {
+            margin: 5px;
+            padding: 3px;
+            width: 100px;
+            border-radius: 8px;
+        }
+
+        div#exibe_resultado {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Quatro operadores aritiméticos JS</h1>
+    <main>
+        <div id="form">
+            Operando 1: <input type="number" id="n1">
+            Operando 2: <input type="number" id="n2">
+            <div id="buttons">
+                <button onclick="somar()">Somar</button>
+                <button onclick="subtrair()">Subtrair</button>
+                <button onclick="dividir()">Dividir</button>
+                <button onclick="multiplicar()">Multiplicar</button>
+            </div>
+            <div id="exibe_resultado"> Resultado: </div>
+        </div>
+    </main>
+    <script>
+        function somar() {            
+            let n1 = document.getElementById('n1').value
+            let n2 = document.getElementById('n2').value
+            let resultado = Number(n1) + Number(n2)
+            let exibir = document.getElementById('exibe_resultado')
+            exibir.innerHTML = ''
+            exibir.innerHTML = `Resultado: ${resultado}`                   
+        }
+        function subtrair() {
+            let n1 = document.getElementById('n1').value
+            let n2 = document.getElementById('n2').value
+            let resultado = Number(n1) - Number(n2)
+            let exibir = document.getElementById('exibe_resultado')
+            exibir.innerHTML = ''
+            exibir.innerHTML += `Resultado: ${resultado}`
+        }
+        function dividir() {
+            let n1 = document.getElementById('n1').value
+            let n2 = document.getElementById('n2').value
+            let resultado = Number(n1) / Number(n2)
+            let exibir = document.getElementById('exibe_resultado')
+            exibir.innerHTML = ''
+            exibir.innerHTML += `Resultado: ${resultado}`
+        }
+        function multiplicar() {
+            let n1 = document.getElementById('n1').value
+            let n2 = document.getElementById('n2').value
+            let resultado = Number(n1) * Number(n2)
+            let exibir = document.getElementById('exibe_resultado')
+            exibir.innerHTML = ''
+            exibir.innerHTML += `Resultado: ${resultado}`
+        }
+    </script>
+</body>
+
+</html>
